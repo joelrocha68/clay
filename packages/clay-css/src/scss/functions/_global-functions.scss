@@ -3,12 +3,7 @@
 ////
 
 @import '_lx-icons-generated.scss';
-
-/// A function that returns an empty map of type `map`. In Sass, Empty maps and lists can be declared using `()` and Sass will assign its type as `list`. This function ensures its type will be `map`.
-
-@function map-new() {
-	@return map-remove((), 'key');
-}
+@import '_type-conversion-functions.scss';
 
 /// A function that returns a new map with all the keys and values including nested keys and values from both `$map1` and `$map2`. If both `$map1` and `$map2` have the same key, `$map2`’s value takes precedence.
 /// @param {Map, Null} $map1[()]
@@ -176,7 +171,7 @@
 		} @else {
 			@return linear-gradient(
 				180deg,
-				mix($body-bg, $gradient, 15%),
+				mix(clay-get-fallback($body-bg), $gradient, 15%),
 				$gradient
 			);
 		}
@@ -258,6 +253,45 @@
 	@return null;
 }
 
+/// A function that returns the fallback value of a CSS Custom Property (CSS variable).
+/// @param {String} $var - The CSS Custom Property to evaluate.
+
+@function clay-get-fallback($var) {
+	@if (type-of($var) == 'string' and str-slice($var, 1, 3) == 'var') {
+		$fallback-value: str-slice(
+			$var,
+			str-index($var, ',') + 2,
+			str-length($var) - 1
+		);
+
+		$units: 'px'
+			'cm'
+			'mm'
+			'%'
+			'ch'
+			'pc'
+			'in'
+			'em'
+			'rem'
+			'pt'
+			'ex'
+			'vw'
+			'vh'
+			'vmin'
+			'vmax';
+
+		@each $unit in $units {
+			@if (str-index($fallback-value, $unit)) {
+				@return to-number($fallback-value);
+			}
+		}
+
+		@return to-color($fallback-value);
+	}
+
+	@return $var;
+}
+
 /// A Bootstrap 4 function that warns the user if values in key value pairs are not in ascending order. Used to evaluate Sass maps `$grid-breakpoints` and `$container-max-widths`.
 /// @param {Map} $map - The map to evaluate
 /// @param {String} $map-name - The name of the map
@@ -267,6 +301,8 @@
 	$prev-num: null;
 
 	@each $key, $num in $map {
+		$num: clay-get-fallback($num);
+
 		@if $prev-num == null or unit($num) == '%' or unit($prev-num) == '%' {
 			// Do nothing
 		} @else if not comparable($prev-num, $num) {
@@ -602,6 +638,32 @@
 // * SPDX-License-Identifier: MIT
 // * SPDX-FileCopyrightText: © 2016 Hugo Giraudel <https://hugogiraudel.com/>
 // *
+
+/// A function that fetches deeply nested values from a Sass map.
+/// @author Hugo Giraudel
+/// @link https://css-tricks.com/snippets/sass/deep-getset-maps/
+/// @param {Map} $map - The Sass map to fetch from
+/// @param {Arglist} $keys - The keys to loop through
+
+@function map-deep-get($map, $keys...) {
+	$newMap: $map;
+
+	@each $key in $keys {
+		@if (type-of($newMap) == 'list' and length($newMap) == 0) or
+			(type-of($newMap) == 'null')
+		{
+			$newMap: map-new();
+		}
+
+		@if (type-of($newMap) != map) {
+			@error ('argument `$map: #{$map}` of `map-deep-get($map, $keys)` must be a map');
+		}
+
+		$newMap: map-get($newMap, $key);
+	}
+
+	@return $newMap;
+}
 
 /// A function to replace all instances of a specific character in a string.
 /// @author Hugo Giraudel

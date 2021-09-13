@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.35.3](https://github.com/liferay/clay/compare/v3.35.2...v3.35.3) (2021-09-09)
+
+**Note:** Version bump only for package @clayui/tooltip
+
+## [3.35.2](https://github.com/liferay/clay/compare/v3.35.1...v3.35.2) (2021-08-30)
+
+**Note:** Version bump only for package @clayui/tooltip
+
+## [3.35.1](https://github.com/liferay/clay/compare/v3.35.0...v3.35.1) (2021-08-30)
+
+**Note:** Version bump only for package @clayui/tooltip
+
+# [3.35.0](https://github.com/liferay/clay/compare/v3.34.0...v3.35.0) (2021-08-30)
+
+### Features
+
+-   **@clayui/tooltip:** replaces direct use of dom-align with doAlign with RTL support ([2afa54c](https://github.com/liferay/clay/commit/2afa54c))
+
+# [3.32.0](https://github.com/liferay/clay/compare/v3.31.0...v3.32.0) (2021-07-28)
+
+### Bug Fixes
+
+-   **@clayui/tooltip:** Hide tooltip on `dragstart` ([70d78da](https://github.com/liferay/clay/commit/70d78da))
+
 # [3.29.0](https://github.com/liferay/clay/compare/v3.28.0...v3.29.0) (2021-05-28)
 
 **Note:** Version bump only for package @clayui/tooltip

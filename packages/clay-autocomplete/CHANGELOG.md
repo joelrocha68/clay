@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.35.3](https://github.com/liferay/clay/compare/v3.35.2...v3.35.3) (2021-09-09)
+
+**Note:** Version bump only for package @clayui/autocomplete
+
+## [3.35.2](https://github.com/liferay/clay/compare/v3.35.1...v3.35.2) (2021-08-30)
+
+**Note:** Version bump only for package @clayui/autocomplete
+
+## [3.35.1](https://github.com/liferay/clay/compare/v3.35.0...v3.35.1) (2021-08-30)
+
+**Note:** Version bump only for package @clayui/autocomplete
+
+# [3.35.0](https://github.com/liferay/clay/compare/v3.34.0...v3.35.0) (2021-08-30)
+
+**Note:** Version bump only for package @clayui/autocomplete
+
+# [3.32.0](https://github.com/liferay/clay/compare/v3.31.0...v3.32.0) (2021-07-28)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fixes a potential XSS vulnerability in autocomplete by removing the use of `dangerouslySetInnerHTML` ([675910c](https://github.com/liferay/clay/commit/675910c))
+
 # [3.30.0](https://github.com/liferay/clay/compare/v3.29.0...v3.30.0) (2021-06-16)
 
 **Note:** Version bump only for package @clayui/autocomplete

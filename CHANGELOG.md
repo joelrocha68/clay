@@ -3,6 +3,124 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.35.3](https://github.com/liferay/clay/compare/v3.35.2...v3.35.3) (2021-09-09)
+
+### Bug Fixes
+
+-   **@clayui/css:** Forms use fixed value for $input-height-inner, $input-height-inner-half, $input-height-inner-quarter to reduce Sass errors with CSS custom properties in $input-line-height and \$input-padding-y ([2fa8ca3](https://github.com/liferay/clay/commit/2fa8ca3)), closes [#4247](https://github.com/liferay/clay/issues/4247)
+
+## [3.35.2](https://github.com/liferay/clay/compare/v3.35.1...v3.35.2) (2021-08-30)
+
+### Bug Fixes
+
+-   **@clayui/shared:** fix error export type from root in package distribution ([121e3cc](https://github.com/liferay/clay/commit/121e3cc))
+
+## [3.35.1](https://github.com/liferay/clay/compare/v3.35.0...v3.35.1) (2021-08-30)
+
+### Bug Fixes
+
+-   **@clayui/shared:** fixes error when importing the type that is not available in the module ([3108383](https://github.com/liferay/clay/commit/3108383))
+
+# [3.35.0](https://github.com/liferay/clay/compare/v3.34.0...v3.35.0) (2021-08-30)
+
+### Bug Fixes
+
+-   **@clayui/dropdown:** Pass useCssRight to domAlign ([34db43e](https://github.com/liferay/clay/commit/34db43e))
+
+### Features
+
+-   **@clayui/drop-down:** replaces direct use of dom-align with doAlign with RTL support ([a311dca](https://github.com/liferay/clay/commit/a311dca))
+-   **@clayui/popover:** replaces direct use of dom-align with doAlign with RTL support ([b69b98b](https://github.com/liferay/clay/commit/b69b98b))
+-   **@clayui/tooltip:** replaces direct use of dom-align with doAlign with RTL support ([2afa54c](https://github.com/liferay/clay/commit/2afa54c))
+
+# [3.34.0](https://github.com/liferay/clay/compare/v3.33.1...v3.34.0) (2021-08-25)
+
+### Bug Fixes
+
+-   **@clayui/css:** Atlas Form readonly input with validation should use the background-color of the base readonly input ([f5580ac](https://github.com/liferay/clay/commit/f5580ac))
+-   **@clayui/css:** Cadmin adds Timelines component, used in Asset Publisher Configuration Modals ([f7b473a](https://github.com/liferay/clay/commit/f7b473a))
+-   **@clayui/css:** Cadmin Modals allow adding cadmin directly to modal-header, modal-body, and modal-footer elements ([038f5be](https://github.com/liferay/clay/commit/038f5be))
+-   **@clayui/css:** Cadmin toggle-switch-check-bar should be 48px wide in larger screens ([5dee0f0](https://github.com/liferay/clay/commit/5dee0f0))
+-   **@clayui/css:** Cards deprecate Bootstrap 4 components `.card-header-tabs`, `.card-header-pills`, `.card-img-*`, `.card-deck`, `.card-group`, `.card-columns`, `.accordion`. Enable them again by setting `$enable-bs4-deprecate: true;`. ([4a05474](https://github.com/liferay/clay/commit/4a05474))
+-   **@clayui/css:** Custom Forms deprecate Bootstrap 4 components `.custom-switch`, `.custom-select`, `.custom-select-lg`, `.custom-select-sm`, `.custom-file`, `.custom-range` ([bc2c5f5](https://github.com/liferay/clay/commit/bc2c5f5))
+-   **@clayui/css:** Custom Forms remove duplicates of custom-control-indicator-checked-border-color and dropdown-font-size ([f0e3212](https://github.com/liferay/clay/commit/f0e3212))
+-   **@clayui/css:** Deprecate Bootstrap 4 component Jumbotron. Enable again by setting `$enable-bs4-deprecate: true;`. ([32d3fd1](https://github.com/liferay/clay/commit/32d3fd1))
+-   **@clayui/css:** Deprecate the Bootstrap 4 Carousel component. Enable them again by setting `$enable-bs4-deprecate: true;`. ([7026c40](https://github.com/liferay/clay/commit/7026c40))
+-   **@clayui/css:** Form deprecate Bootstrap 4 components `.col-form-label`, `.col-form-label-lg`, `.col-form-label-sm`, `.form-row`, `.form-inline`. Enable them again by setting `$enable-bs4-deprecate: true;`. ([08da40a](https://github.com/liferay/clay/commit/08da40a))
+-   **@clayui/css:** Form Validation deprecate Bootstrap 4 HTML5 Form Validation components `.was-validated`, `.invalid-feedback`, `.valid-feedback`, `.#{$state}-feedback`, `.#{$state}-tooltip` ([ed0e374](https://github.com/liferay/clay/commit/ed0e374))
+-   **@clayui/css:** Globals adds `$enable-bs4-deprecated` setting to enable Bootstrap 4 components that we have deprecated ([7e9ac0d](https://github.com/liferay/clay/commit/7e9ac0d))
+-   **@clayui/css:** Globals set `$enable-bs4-deprecated: true !default;`. You can disable the deprecated Bootstrap 4 components by setting `$enable-bs4-deprecated: false !default;`. This will prevent the deprecated component CSS from being output. ([01f3ba6](https://github.com/liferay/clay/commit/01f3ba6))
+-   **@clayui/css:** Mixins Timelines ignore timeline variables and use cadmin variables when compiling Cadmin Timelines ([2eebd4a](https://github.com/liferay/clay/commit/2eebd4a))
+-   **@clayui/css:** Nav deprecate Bootstrap 4 component `.nav-pills`. Enable again by setting `$enable-bs4-deprecate: true;`. ([d2c9027](https://github.com/liferay/clay/commit/d2c9027))
+-   **@clayui/css:** Removes unused variables: ([32b1c4c](https://github.com/liferay/clay/commit/32b1c4c))
+-   **@clayui/css:** Spinners deprecate Bootstrap 4 component. Enable again by setting `$enable-bs4-deprecate: true;`. ([3f8fe71](https://github.com/liferay/clay/commit/3f8fe71))
+-   **@clayui/css:** Table remove unused components `.table-drag`, `.table-dragging`, `.table-clone` and remove maps `$table-drag`, `$table-dragging`, `$table-clone` ([e6adb42](https://github.com/liferay/clay/commit/e6adb42))
+-   **@clayui/css:** Toasts deprecate Bootstrap 4 component. Enable again by setting `$enable-bs4-deprecate: true;`. ([02845eb](https://github.com/liferay/clay/commit/02845eb))
+-   **@clayui/css:** Wrap \*-theme-colors map keys in single quotes. Key names that match CSS colors makes Sass throw this warning without quotes: ([2a1fb6a](https://github.com/liferay/clay/commit/2a1fb6a)), closes [#4219](https://github.com/liferay/clay/issues/4219)
+
+### Features
+
+-   **@clayui/modal:** Allow setting CSS classes and other properties on ClayModal.Footer and ClayModal.Body ([42cee72](https://github.com/liferay/clay/commit/42cee72))
+
+## [3.33.1](https://github.com/liferay/clay/compare/v3.33.0...v3.33.1) (2021-08-12)
+
+### Bug Fixes
+
+-   **@clayui/css:** Globals move `$bg-theme-colors`, `$bg-gradient-theme-colors`, `$border-theme-colors`, `$text-theme-colors` maps to where they are used in Utilities ([07f4c9d](https://github.com/liferay/clay/commit/07f4c9d)), closes [#4214](https://github.com/liferay/clay/issues/4214)
+-   **@clayui/css:** Use fallback value for `$body-bg` when using variable inside a Sass color function. Sass color functions do not accept CSS custom property as a value. ([ae0dff6](https://github.com/liferay/clay/commit/ae0dff6))
+-   **@clayui/css:** Utilities Functional Important generate `.border-white` with `$border-theme-colors` map ([40131be](https://github.com/liferay/clay/commit/40131be)), closes [#4214](https://github.com/liferay/clay/issues/4214)
+
+# [3.33.0](https://github.com/liferay/clay/compare/v3.32.1...v3.33.0) (2021-08-11)
+
+### Bug Fixes
+
+-   **@clayui/css:** Cadmin Modal .modal.show should have display: block ([5876b9f](https://github.com/liferay/clay/commit/5876b9f)), closes [#4203](https://github.com/liferay/clay/issues/4203)
+-   **@clayui/css:** Cadmin removes unused variables `$cadmin-body-moz-osx-font-smoothing`, `$cadmin-body-webkit-font-smoothing`, `$cadmin-body-text-align`. We don't provide a CSS reset in Cadmin. ([c3af64e](https://github.com/liferay/clay/commit/c3af64e))
+-   **@clayui/css:** Forms .form-control-select with long text shouldn't break to new line and should have overflow ellipsis, similar behavior to select.form-control ([44804d8](https://github.com/liferay/clay/commit/44804d8)), closes [#4206](https://github.com/liferay/clay/issues/4206)
+-   **@clayui/css:** Forms remove Bootstrap's confusing way of setting an inset box-shadow on an input. This causes flickering on .btn.form-control-select on click. If you want a regular box-shadow and an inset box-shadow on an input define them both inside the \$input-box-shadow variable. Example below: ([83d56d1](https://github.com/liferay/clay/commit/83d56d1)), closes [#4206](https://github.com/liferay/clay/issues/4206)
+-   **@clayui/css:** Functions adds `_type-conversion-functions.scss` for converting colors of type string to type color. Sass doesn't provide a way to do this https://github.com/sass/sass/issues/3006. ([68be792](https://github.com/liferay/clay/commit/68be792)), closes [#4180](https://github.com/liferay/clay/issues/4180)
+-   **@clayui/css:** Global Functions `clay-get-fallback` convert color string to type color ([68fd699](https://github.com/liferay/clay/commit/68fd699))
+-   **@clayui/css:** Removes the use of `$theme-colors` Sass map to generate utility properties (e.g., `bg-primary`, `text-primary`, `list-group-item-primary`, `table-primary`) and allow configuring separately. The new way also supports CSS variables. Adds new maps: ([78fb2d2](https://github.com/liferay/clay/commit/78fb2d2))
+
+### Features
+
+-   **@clayui/css:** Reboot `body` element should use clay-css mixin for generating properties ([c0b456e](https://github.com/liferay/clay/commit/c0b456e)), closes [#4194](https://github.com/liferay/clay/issues/4194)
+-   **@clayui/pagination:** Add the `alignmentPosition` API to PaginationWithBasicItems component ([24ca87c](https://github.com/liferay/clay/commit/24ca87c))
+-   **@clayui/pagination-bar:** Add the `alignmentPosition` API to PaginationBarWithBasicItems component ([eca557f](https://github.com/liferay/clay/commit/eca557f))
+
+## [3.32.1](https://github.com/liferay/clay/compare/v3.32.0...v3.32.1) (2021-07-30)
+
+### Bug Fixes
+
+-   **@clayui/css:** Cadmin Treeview scope `component-action`, `component-expander`, `component-icon`, `component-text` so styles don't bleed into other components ([1ce70bd](https://github.com/liferay/clay/commit/1ce70bd)), closes [#4198](https://github.com/liferay/clay/issues/4198)
+
+# [3.32.0](https://github.com/liferay/clay/compare/v3.31.0...v3.32.0) (2021-07-28)
+
+### Bug Fixes
+
+-   **@clayui/autocomplete:** fixes a potential XSS vulnerability in autocomplete by removing the use of `dangerouslySetInnerHTML` ([675910c](https://github.com/liferay/clay/commit/675910c))
+-   **@clayui/color-picker:** fix error of "hidden" input add extra margin ([f4d8aa0](https://github.com/liferay/clay/commit/f4d8aa0))
+-   **@clayui/css:** Cadmin Links adds `component-text` and `component-icon`, generic names for reuse in other components ([ae49f03](https://github.com/liferay/clay/commit/ae49f03))
+-   **@clayui/css:** Cadmin Treeview new component ([ea1568e](https://github.com/liferay/clay/commit/ea1568e))
+-   **@clayui/css:** Forms `form-group-sm div.form-control` should be 32px tall and grow to fix content inside, similar to a textarea element ([eb987a1](https://github.com/liferay/clay/commit/eb987a1)), closes [#4164](https://github.com/liferay/clay/issues/4164)
+-   **@clayui/css:** Grid generating `container-max-width-*` classes should work with Custom Properties ([b12dbf5](https://github.com/liferay/clay/commit/b12dbf5))
+-   **@clayui/css:** Mixins update `clay-loading-animation-variant` to use `clay-css` pattern ([4280c6f](https://github.com/liferay/clay/commit/4280c6f)), closes [#3987](https://github.com/liferay/clay/issues/3987)
+-   **@clayui/css:** Mixins update `sheet-footer-btn-block` to use `clay-css` pattern ([5523b67](https://github.com/liferay/clay/commit/5523b67)), closes [#3987](https://github.com/liferay/clay/issues/3987)
+-   **@clayui/css:** Sheet `$sheet-lg-max-width` should use fixed number instead of generating based on a `$container-max-widths` value ([5968bd5](https://github.com/liferay/clay/commit/5968bd5))
+-   **@clayui/css:** Utilities remove duplicate rounded utilities ([6687624](https://github.com/liferay/clay/commit/6687624))
+-   **@clayui/shared:** fixes error when getting stuck in an input masked as hidden ([4c0c5cb](https://github.com/liferay/clay/commit/4c0c5cb))
+-   **@clayui/tooltip:** Hide tooltip on `dragstart` ([70d78da](https://github.com/liferay/clay/commit/70d78da))
+-   **clayui.com:** fixes error when generating slugs for documents inside packages ([5e00f5a](https://github.com/liferay/clay/commit/5e00f5a))
+
+### Features
+
+-   **@clayui/core:** Add Provider component and the new `@clayui/core` package ([1d4e4b3](https://github.com/liferay/clay/commit/1d4e4b3))
+-   **@clayui/core:** adds `theme` API to Provider ([e7bae7d](https://github.com/liferay/clay/commit/e7bae7d))
+-   **@clayui/css:** \$container-max-widths Sass map should accept CSS Custom Properties ([3a8ffe2](https://github.com/liferay/clay/commit/3a8ffe2))
+-   **@clayui/css:** Buttons use nested property names in variables to stay as close as possible to the way our CSS is written ([89e3360](https://github.com/liferay/clay/commit/89e3360)), closes [#4176](https://github.com/liferay/clay/issues/4176)
+-   **@clayui/css:** Functions adds `map-deep-get` for getting values of deeply nested Sass map items ([2b80302](https://github.com/liferay/clay/commit/2b80302))
+-   **@clayui/pagination-bar:** Add the `showDeltasDropDown` prop ([6c65f43](https://github.com/liferay/clay/commit/6c65f43)), closes [#4175](https://github.com/liferay/clay/issues/4175)
+
 # [3.31.0](https://github.com/liferay/clay/compare/v3.30.0...v3.31.0) (2021-06-30)
 
 ### Bug Fixes

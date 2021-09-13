@@ -56,7 +56,21 @@ $sheet-footer-btn-block-sm-down: () !default;
 $sheet-footer-btn-block-sm-down: map-deep-merge(
 	(
 		breakpoint-down: sm,
-		btn-margin-bottom-mobile: 1rem,
+		mobile: (
+			display: block,
+			btn: (
+				display: block,
+				margin-bottom: 1rem,
+				width: 100%,
+			),
+			btn-group: (
+				display: block,
+			),
+			btn-group-item: (
+				display: block,
+				margin-right: 0,
+			),
+		),
 	),
 	$sheet-footer-btn-block-sm-down
 );
@@ -65,9 +79,7 @@ $sheet-footer-btn-block-sm-down: map-deep-merge(
 
 /// @deprecated as of 3.x.
 
-$sheet-lg-max-width: ceil(
-	map-get($container-max-widths, lg) * 0.83333
-) !default; // 800px
+$sheet-lg-max-width: 800px !default;
 
 // Sheet Title
 

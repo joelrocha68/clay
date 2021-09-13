@@ -1,6 +1,6 @@
 {
 	"name": "@clayui/slider",
-	"version": "3.25.1",
+	"version": "3.32.0",
 	"description": "ClaySlider component",
 	"license": "BSD-3-Clause",
 	"repository": "https://github.com/liferay/clay",
@@ -30,8 +30,8 @@
 	},
 	"peerDependencies": {
 		"@clayui/css": "3.x",
-		"react": "^16.8.1",
-		"react-dom": "^16.8.1"
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0"
 	},
 	"browserslist": [
 		"extends browserslist-config-clay"

@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.35.3](https://github.com/julien/clay/compare/v3.35.2...v3.35.3) (2021-09-09)
+
+**Note:** Version bump only for package demos
+
+## [3.35.2](https://github.com/matuzalemsteles/clay/compare/v3.35.1...v3.35.2) (2021-08-30)
+
+**Note:** Version bump only for package demos
+
+## [3.35.1](https://github.com/matuzalemsteles/clay/compare/v3.35.0...v3.35.1) (2021-08-30)
+
+**Note:** Version bump only for package demos
+
+# [3.35.0](https://github.com/matuzalemsteles/clay/compare/v3.34.0...v3.35.0) (2021-08-30)
+
+**Note:** Version bump only for package demos
+
+# [3.33.0](https://github.com/matuzalemsteles/clay/compare/v3.32.1...v3.33.0) (2021-08-11)
+
+**Note:** Version bump only for package demos
+
+# [3.32.0](https://github.com/matuzalemsteles/clay/compare/v3.31.0...v3.32.0) (2021-07-28)
+
+**Note:** Version bump only for package demos
+
 # [3.31.0](https://github.com/matuzalemsteles/clay/compare/v3.30.0...v3.31.0) (2021-06-30)
 
 **Note:** Version bump only for package demos

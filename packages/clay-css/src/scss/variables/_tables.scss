@@ -410,88 +410,75 @@ $table-valign-top-body-cell-padding-top: 1rem !default;
 
 $table-valign-bottom-body-cell-padding-bottom: 1rem !default;
 
-// Table Draggable
+// Table Row Backgrounds
 
-$table-drag: () !default;
-$table-drag: map-deep-merge(
+$table-row-theme-colors: () !default;
+$table-row-theme-colors: map-deep-merge(
 	(
-		cell: (
-			position: relative,
+		'primary': (
+			background-color: theme-color-level(primary, $table-bg-level),
+			border-color: theme-color-level(primary, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(primary, $table-bg-level), 5%),
+			),
 		),
-		c-drag: (
-			cursor: move,
+		'secondary': (
+			background-color: theme-color-level(secondary, $table-bg-level),
+			border-color: theme-color-level(secondary, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(secondary, $table-bg-level), 5%),
+			),
 		),
-		c-dragging-after: (
-			background-color: $gray-400,
-			bottom: 0,
-			content: '',
-			display: block,
-			left: 1px,
-			position: absolute,
-			right: 0,
-			top: 0,
+		'success': (
+			background-color: theme-color-level(success, $table-bg-level),
+			border-color: theme-color-level(success, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(success, $table-bg-level), 5%),
+			),
 		),
-		c-droppable-before: (
-			background-image:
-				linear-gradient($orange 50%, rgba(255, 255, 255, 0) 0%),
-			background-position: right,
-			background-repeat: repeat-y,
-			background-size: 5px 6px,
-			bottom: 0,
-			content: '',
-			display: block,
-			left: 0,
-			position: absolute,
-			top: 0,
-			width: 1px,
-			z-index: 1,
+		'info': (
+			background-color: theme-color-level(info, $table-bg-level),
+			border-color: theme-color-level(info, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(info, $table-bg-level), 5%),
+			),
+		),
+		'warning': (
+			background-color: theme-color-level(warning, $table-bg-level),
+			border-color: theme-color-level(warning, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(warning, $table-bg-level), 5%),
+			),
+		),
+		'danger': (
+			background-color: theme-color-level(danger, $table-bg-level),
+			border-color: theme-color-level(danger, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(danger, $table-bg-level), 5%),
+			),
+		),
+		'light': (
+			background-color: theme-color-level(light, $table-bg-level),
+			border-color: theme-color-level(light, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(light, $table-bg-level), 5%),
+			),
+		),
+		'dark': (
+			background-color: theme-color-level(dark, $table-bg-level),
+			border-color: theme-color-level(dark, $table-border-level),
+			hover: (
+				background-color:
+					darken(theme-color-level(dark, $table-bg-level), 5%),
+			),
 		),
 	),
-	$table-drag
-);
-
-$table-dragging: () !default;
-$table-dragging: map-merge(
-	(
-		cursor: move,
-		user-select: none,
-	),
-	$table-dragging
-);
-
-$table-clone: () !default;
-$table-clone: map-deep-merge(
-	(
-		background-color: rgba($primary-l3, 0.9),
-		cursor: move,
-		position: absolute,
-		top: 0,
-		z-index: 1050,
-		after: (
-			background-color: $primary,
-			bottom: 0,
-			content: '',
-			display: block,
-			position: absolute,
-			right: 0,
-			top: 1px,
-			width: 2px,
-			z-index: 1,
-		),
-		before: (
-			background-color: $primary,
-			bottom: 0,
-			content: '',
-			display: block,
-			left: 0,
-			position: absolute,
-			top: 1px,
-			width: 2px,
-			z-index: 1,
-		),
-		cell: (
-			background-color: transparent,
-		),
-	),
-	$table-clone
+	$table-row-theme-colors
 );

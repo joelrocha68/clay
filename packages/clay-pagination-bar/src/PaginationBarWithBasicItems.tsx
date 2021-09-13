@@ -52,6 +52,14 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	activePage?: number;
 
 	/**
+	 * Sets the default DropDown position of the component. The component
+	 * receives the Align constant values from the `@clayui/drop-down` package.
+	 */
+	alignmentPosition?: React.ComponentProps<
+		typeof ClayPaginationWithBasicItems
+	>['alignmentPosition'];
+
+	/**
 	 * Possible values of items per page.
 	 */
 	deltas?: Array<IDelta>;
@@ -97,6 +105,11 @@ interface IProps extends React.ComponentProps<typeof PaginationBar> {
 	onPageChange?: (page: number) => void;
 
 	/**
+	 * Flags indicating if the DropDown should be rendered.
+	 */
+	showDeltasDropDown?: boolean;
+
+	/**
 	 * Path to spritemap from clay-css.
 	 */
 	spritemap?: string;
@@ -116,6 +129,7 @@ const DEFAULT_LABELS = {
 export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = ({
 	activeDelta,
 	activePage = 1,
+	alignmentPosition,
 	deltas = defaultDeltas,
 	disabledPages,
 	ellipsisBuffer,
@@ -123,6 +137,7 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = 
 	labels = DEFAULT_LABELS,
 	onDeltaChange,
 	onPageChange,
+	showDeltasDropDown = true,
 	spritemap,
 	totalItems,
 	...otherProps
@@ -162,22 +177,25 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = 
 
 	return (
 		<PaginationBar {...otherProps}>
-			<PaginationBar.DropDown
-				items={items}
-				trigger={
-					<ClayButton
-						data-testid="selectPaginationBar"
-						displayType="unstyled"
-					>
-						{sub(labels.perPageItems, [activeDelta])}
+			{showDeltasDropDown && (
+				<PaginationBar.DropDown
+					alignmentPosition={alignmentPosition}
+					items={items}
+					trigger={
+						<ClayButton
+							data-testid="selectPaginationBar"
+							displayType="unstyled"
+						>
+							{sub(labels.perPageItems, [activeDelta])}
 
-						<ClayIcon
-							spritemap={spritemap}
-							symbol="caret-double-l"
-						/>
-					</ClayButton>
-				}
-			/>
+							<ClayIcon
+								spritemap={spritemap}
+								symbol="caret-double-l"
+							/>
+						</ClayButton>
+					}
+				/>
+			)}
 
 			<PaginationBar.Results>
 				{sub(labels.paginationResults, [
@@ -191,6 +209,7 @@ export const ClayPaginationBarWithBasicItems: React.FunctionComponent<IProps> = 
 
 			<ClayPaginationWithBasicItems
 				activePage={activePage}
+				alignmentPosition={alignmentPosition}
 				disabledPages={disabledPages}
 				ellipsisBuffer={ellipsisBuffer}
 				hrefConstructor={hrefConstructor}
